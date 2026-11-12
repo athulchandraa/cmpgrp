@@ -14,9 +14,6 @@ function RegisterPage() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [errors, setErrors] = useState({})
   const [formMessage, setFormMessage] = useState('')
-  const[userData,setUSerdata]=useState({
-    name:"",email:"",mobile:"",password:""
-  })
 
   const navigate=useNavigate()
 
@@ -56,7 +53,6 @@ function RegisterPage() {
   }
 
   const handleRegistration=async(regData)=>{
-    console.log(regData);
     try{
       const response=await registerAPI(regData)
     if(response.status==201){

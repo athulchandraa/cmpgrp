@@ -53,7 +53,6 @@ function LoginPage() {
         const response=await loginAPI(loginData)
         if(response.status==200){
           const result=response.data
-          console.log(result);
           sessionStorage.setItem("user",JSON.stringify(result.data))
           sessionStorage.setItem("token",result.token)
 
